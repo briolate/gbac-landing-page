@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.min.css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
   <main id="main-container">
     <div class="banner">
       <div id="overlay"></div>
-      <div class="wrapper">
+      <div id="banner-height" class="wrapper">
         <div id="top">
           <div id="top-content">
             <section id="heading">
@@ -208,6 +208,21 @@
         </div>
       </div>
   </footer>
+
+  <script>
+
+    function resize() {
+      let bannerHeight = document.getElementById("banner-height").offsetHeight + 'px';
+      let overlay = document.getElementById("overlay");
+      overlay.style.height = bannerHeight;
+    }
+
+    window.addEventListener("load", resize)
+
+    window.addEventListener('resize', resize)
+
+
+  </script>
 
 </body>
 
